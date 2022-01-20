@@ -1,0 +1,16 @@
+body {
+    background-color: #89DAB9;
+}
+
+#schedule-container , #title {
+    font-family: 'Prompt';
+    
+}
+
+#schedule-container {
+background-color: #74987B;
+}
+
+#btn {
+background-color: #89DAB9;
+}
