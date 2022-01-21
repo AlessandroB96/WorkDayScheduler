@@ -1,5 +1,5 @@
 let buttonEl = document.querySelectorAll('#save-btn');
-let textDescription = document.getElementById('#text-box')
+let textDescription = document.querySelectorAll('#text-box')
 
 //lISTEN FOR SAVE BUTTON 
 
@@ -13,6 +13,11 @@ buttonEl.forEach(function(elem) {
 
 //LISTEN FOR TEXT BOX INPUT
 
+textDescription.forEach(function(elem) {
+    elem.addEventListener('click', function() {
+        console.log('input field clicked');
+    });
+})
 
 
 
