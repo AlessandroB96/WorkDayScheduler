@@ -1,5 +1,15 @@
 let buttonEl = document.querySelectorAll('#save-btn');
-let textDescription = document.querySelectorAll('#text-box')
+let textDescription = document.querySelectorAll('#text-box');
+
+//--------------------------------
+
+//MOMENT.JS IMPLEMENTATION 
+
+let timeDisplay = document.querySelector('#clock-display');
+timeDisplay.textContent = moment().format('dddd MMMM Do YYYY');
+document.appendChild(timeDisplay)
+
+//--------------------------------
 
 //lISTEN FOR SAVE BUTTON 
 
