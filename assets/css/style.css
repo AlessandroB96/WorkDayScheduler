@@ -18,3 +18,15 @@ background-color: #89DAB9;
 input {
    font-size: 20px; 
 }
+
+.past {
+    background-color: rgb(161, 159, 159);
+}
+
+.present {
+    background-color: rgb(200, 78, 78);
+}
+
+.future {
+    background-color: rgb(69, 231, 150);
+}
