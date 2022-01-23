@@ -1,3 +1,5 @@
+//GLOBAL VARIABLES 
+
 let buttonEl = document.querySelectorAll('#save-btn');
 let textDescription = document.querySelectorAll('#text-box');
 
@@ -11,7 +13,45 @@ let textBox3pm = document.getElementsByName('15');
 let textBox4pm = document.getElementsByName('16');
 let textBox5pm = document.getElementsByName('17');
 
+//When page loads up, fetch local storage values 
+$(document).ready(function() {
 
+    var getTextValues09 = localStorage.getItem('09');
+    localStorage.getItem('09');
+    textBox9am[0].value = getTextValues09;
+
+    var getTextValues10 = localStorage.getItem('10');
+    localStorage.getItem('10');
+    textBox10am[0].value = getTextValues10;
+    
+    var getTextValues11 = localStorage.getItem('11');
+    localStorage.getItem('11');
+    textBox11am[0].value = getTextValues11; 
+
+    var getTextValues12 = localStorage.getItem('12');
+    localStorage.getItem('12');
+    textBox12pm[0].value = getTextValues12; 
+
+    var getTextValues1 = localStorage.getItem('13');
+    localStorage.getItem('13');
+    textBox1pm[0].value = getTextValues1; 
+
+    var getTextValues2 = localStorage.getItem('14');
+    localStorage.getItem('14');
+    textBox2pm[0].value = getTextValues2; 
+
+    var getTextValues3 = localStorage.getItem('15');
+    localStorage.getItem('15');
+    textBox3pm[0].value = getTextValues3; 
+
+    var getTextValues4 = localStorage.getItem('16');
+    localStorage.getItem('16');
+    textBox4pm[0].value = getTextValues4; 
+
+    var getTextValues5 = localStorage.getItem('17');
+    localStorage.getItem('17');
+    textBox5pm[0].value = getTextValues5; 
+});
 
 //--------------------------------
 
@@ -86,57 +126,7 @@ textDescription.forEach(function(elem) {
     });
 })
 
-//---------------------------------
-
-/*
-1) need a way to tie each save button with each text box
-2) 
-*/
-
-$(document).ready(function() {
-
-    var getTextValues09 = localStorage.getItem('09');
-    localStorage.getItem('09');
-    textBox9am[0].value = getTextValues09;
-
-    var getTextValues10 = localStorage.getItem('10');
-    localStorage.getItem('10');
-    textBox10am[0].value = getTextValues10;
-    
-    var getTextValues11 = localStorage.getItem('11');
-    localStorage.getItem('11');
-    textBox11am[0].value = getTextValues11; 
-
-    var getTextValues12 = localStorage.getItem('12');
-    localStorage.getItem('12');
-    textBox12pm[0].value = getTextValues12; 
-
-    var getTextValues1 = localStorage.getItem('13');
-    localStorage.getItem('13');
-    textBox1pm[0].value = getTextValues1; 
-
-    var getTextValues2 = localStorage.getItem('14');
-    localStorage.getItem('14');
-    textBox2pm[0].value = getTextValues2; 
-
-    var getTextValues3 = localStorage.getItem('15');
-    localStorage.getItem('15');
-    textBox3pm[0].value = getTextValues3; 
-
-    var getTextValues4 = localStorage.getItem('16');
-    localStorage.getItem('16');
-    textBox4pm[0].value = getTextValues4; 
-
-    var getTextValues5 = localStorage.getItem('17');
-    localStorage.getItem('17');
-    textBox5pm[0].value = getTextValues5; 
-
-
-
-
-});
-
-
+//When button is clicked, store textarea value to local storage 
 
 $("#save-btn1").on('click',function() {
 
@@ -246,10 +236,6 @@ $("#save-btn1").on('click',function() {
 
  })
 
-//localStorage.setItem("text-box", textDescription.values());
-
-//let getStoredValue = localStorage.getItem("text-box");
-//console.log(localStorage);
 
 
 //----------------------------------
