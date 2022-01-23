@@ -1,6 +1,18 @@
 let buttonEl = document.querySelectorAll('#save-btn');
 let textDescription = document.querySelectorAll('#text-box');
 
+let textBox9am = document.getElementsByName('09');
+let textBox10am = document.getElementsByName('10');
+let textBox11am = document.getElementsByName('11');
+let textBox12pm = document.getElementsByName('12');
+let textBox1pm = document.getElementsByName('13');
+let textBox2pm = document.getElementsByName('14');
+let textBox3pm = document.getElementsByName('15');
+let textBox4pm = document.getElementsByName('16');
+let textBox5pm = document.getElementsByName('17');
+
+
+
 //--------------------------------
 
 //MOMENT.JS IMPLEMENTATION 
@@ -16,7 +28,6 @@ var checkTime = function () {
     var currentTime = moment().format('H');
 
     var currentTimeNumber = parseInt(currentTime, 10);
-        console.log("current time is = " , currentTimeNumber);
 
     //get all elements with class "taskarea"
     var timeBlockElements = textDescription;
@@ -76,48 +87,170 @@ textDescription.forEach(function(elem) {
 })
 
 //---------------------------------
-let obj = [];
-
-$(document).on('click', '#save-btn',function() {
-
-    //let tasks = localStorage.getItem('text-box');
-    
-
-      for (let j = 0; j < textDescription.length; j++) {
-
-        obj.push({
-            'textTimeSlot': textDescription[j].name,
-            'textDescription': textDescription[j].value
-    })
-
-    localStorage.setItem('tasks', JSON.stringify(obj));
-
-    var tasks = JSON.parse(localStorage.getItem('tasks'));
-
- }
-    
-    
 
 /*
-    $("#hour8 .description").val(localStorage.getItem("hour8"));
-    $("#hour9 .description").val(localStorage.getItem("hour9"));
-    $("#hour10 .description").val(localStorage.getItem("hour10"));
-    $("#hour11 .description").val(localStorage.getItem("hour11"));
-    $("#hour12 .description").val(localStorage.getItem("hour12"));
-    $("#hour13 .description").val(localStorage.getItem("hour13"));
-    $("#hour14 .description").val(localStorage.getItem("hour14"));
-    $("#hour15 .description").val(localStorage.getItem("hour15"));
-    $("#hour16 .description").val(localStorage.getItem("hour16"));
-    $("#hour17 .description").val(localStorage.getItem("hour17"));
-
+1) need a way to tie each save button with each text box
+2) 
 */
 
-}
+$(document).ready(function() {
+
+    var getTextValues09 = localStorage.getItem('09');
+    localStorage.getItem('09');
+    textBox9am[0].value = getTextValues09;
+
+    var getTextValues10 = localStorage.getItem('10');
+    localStorage.getItem('10');
+    textBox10am[0].value = getTextValues10;
+    
+    var getTextValues11 = localStorage.getItem('11');
+    localStorage.getItem('11');
+    textBox11am[0].value = getTextValues11; 
+
+    var getTextValues12 = localStorage.getItem('12');
+    localStorage.getItem('12');
+    textBox12pm[0].value = getTextValues12; 
+
+    var getTextValues1 = localStorage.getItem('13');
+    localStorage.getItem('13');
+    textBox1pm[0].value = getTextValues1; 
+
+    var getTextValues2 = localStorage.getItem('14');
+    localStorage.getItem('14');
+    textBox2pm[0].value = getTextValues2; 
+
+    var getTextValues3 = localStorage.getItem('15');
+    localStorage.getItem('15');
+    textBox3pm[0].value = getTextValues3; 
+
+    var getTextValues4 = localStorage.getItem('16');
+    localStorage.getItem('16');
+    textBox4pm[0].value = getTextValues4; 
+
+    var getTextValues5 = localStorage.getItem('17');
+    localStorage.getItem('17');
+    textBox5pm[0].value = getTextValues5; 
+
+
+
+
+});
+
+
+
+$("#save-btn1").on('click',function() {
+
+    let textBox9am = document.getElementsByName('09');
+
+    localStorage.setItem(textDescription[0].name, textDescription[0].value);
+    
+    var getTextValues = localStorage.getItem('09');
+
+    textBox9am.value = getTextValues;
+
+ })
+
+ $("#save-btn2").on('click',function() {
+
+    let textBox10am = document.getElementsByName('10');
+
+    localStorage.setItem(textDescription[1].name, textDescription[1].value);
+
+    var getTextValues = localStorage.getItem('10');
+
+    textBox10am.value = getTextValues;
+
+ })
+
+ $("#save-btn3").on('click',function() {
+
+    let textBox11am = document.getElementsByName('11');
+
+    localStorage.setItem(textDescription[2].name, textDescription[2].value);
+
+    var getTextValues = localStorage.getItem('11');
+
+    textBox11am.value = getTextValues;
+ 
+ })
+
+ $("#save-btn4").on('click',function() {
+
+    let textBox12pm = document.getElementsByName('12');
+
+    localStorage.setItem(textDescription[3].name, textDescription[3].value);
+
+    var getTextValues = localStorage.getItem('12');
+
+    textBox12pm.value = getTextValues;
+
+ })
+
+ $("#save-btn5").on('click',function() {
+
+    let textBox1pm = document.getElementsByName('13');
+
+    localStorage.setItem(textDescription[4].name, textDescription[4].value);
+
+    var getTextValues = localStorage.getItem('13');
+
+    textBox1pm.value = getTextValues;
+ 
+ })
+    
+ $("#save-btn6").on('click',function() {
+
+    let textBox2pm = document.getElementsByName('14');
+
+    localStorage.setItem(textDescription[5].name, textDescription[5].value);
+
+    var getTextValues = localStorage.getItem('14');
+
+    textBox2pm.value = getTextValues;
+
+ })
+
+ $("#save-btn7").on('click',function() {
+
+    let textBox3pm = document.getElementsByName('15');
+
+    localStorage.setItem(textDescription[6].name, textDescription[6].value);
+
+    var getTextValues = localStorage.getItem('15');
+
+    textBox3pm.value = getTextValues;
+
+ })
+
+ $("#save-btn8").on('click',function() {
+
+    let textBox4pm = document.getElementsByName('16');
+
+    localStorage.setItem(textDescription[7].name, textDescription[7].value);
+
+    var getTextValues = localStorage.getItem('16');
+
+    textBox4pm.value = getTextValues;
+ })
+
+ $("#save-btn9").on('click',function() {
+
+
+    let textBox5pm = document.getElementsByName('17');
+
+    localStorage.setItem(textDescription[8].name, textDescription[8].value);
+
+    var getTextValues = localStorage.getItem('17');
+
+    textBox5pm.value = getTextValues;
+
+ })
+
 //localStorage.setItem("text-box", textDescription.values());
 
 //let getStoredValue = localStorage.getItem("text-box");
 //console.log(localStorage);
-    )
+
 
 //----------------------------------
 //SAVING TASKS TO LOCALSTORAGE 
@@ -126,4 +259,3 @@ $(document).on('click', '#save-btn',function() {
 //getItem() --> localStorage.getItem()
 
 //-----------------------------------
-  

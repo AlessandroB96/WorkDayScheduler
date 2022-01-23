@@ -8,19 +8,23 @@ body {
 }
 
 #schedule-container {
-background-color: #74987B;
+background-color: hsl(184, 30%, 43%);
 }
 
+#time-display {
+    background-color: black;
+}
 #btn {
 background-color: #89DAB9;
 }
 
-input {
+textarea {
    font-size: 20px; 
+   line-height: 40px;
 }
 
 .past {
-    background-color: rgb(161, 159, 159);
+    background-color: rgb(149, 149, 149);
 }
 
 .present {
@@ -29,4 +33,8 @@ input {
 
 .future {
     background-color: rgb(69, 231, 150);
+}
+
+button:hover {
+    opacity: 75%;
 }
