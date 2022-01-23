@@ -238,10 +238,3 @@ $("#save-btn1").on('click',function() {
 
 
 
-//----------------------------------
-//SAVING TASKS TO LOCALSTORAGE 
-
-//setItem() --> localStorage.setItem()
-//getItem() --> localStorage.getItem()
-
-//-----------------------------------
